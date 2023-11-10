@@ -1,0 +1,18 @@
+:root {
+
+}
+header {
+    height: 20em;
+    width: 100%;
+    background-color: beige;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.biography {
+    display: flex;
+    margin: 2em;
+}
