@@ -1,18 +1,326 @@
 :root {
 
+    --darkgreen:rgb(2, 43, 19);
+}
+
+body, header, h1, h2, main, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    display: flex;
+    justify-content: center;
+
 }
 header {
-    height: 20em;
     width: 100%;
-    background-color: beige;
+}
+
+.header_image {
+    display: flex;
+    justify-content: center;
 }
 
 body {
     background-color: black;
     color: white;
+    max-width: 2000px;
 }
 
-.biography {
+ul {
+    list-style-type: none;
+}
+
+p {
+    text-align: justify;
+}
+
+main {
     display: flex;
+
+    margin-top: 2em;
+    padding: 2em;
+    
+}
+
+.index_biography {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 2em;
+}
+
+.index_rightside {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.index_rightside p{
+    width: 70%;
+
+}
+
+.index_biography a {
+    cursor: pointer;
+    font-style: italic;
+    color: red;
+}
+
+.menubar {
+    
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sub_menubar li {
+    padding: 2em;
+    border-bottom: solid 0.1em white;
+}
+
+.sub_menubar li a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.sub_menubar li a:hover {
+    color: red;
+
+}
+
+
+.group_row {
+    display: flex;
+    align-items: center;
+    width: 50em;   
+}
+
+.group_row h3 {
+    display: inline-block; 
+}
+  
+.group_row a {
+    color: aqua;
+    text-decoration: none;
+}
+
+.group_info {
+    border-top: 0.1em solid white;
     margin: 2em;
+}
+
+.group_title {
+    width: 40%;
+}
+
+.bio_links {
+    display: flex; 
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+
+.Album_highlights {
+    display: flex;
+    flex-direction: column;
+    border-top: 0.1em solid white;
+}
+
+.photoAlbum_highlights {
+    width: 10em;
+    height: 10em;
+    margin: 1em;
+}
+
+
+.album_firstrow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.album_firstrow h3 {
+    margin-right: 30em; 
+}
+
+.album_firstrow h4 {
+    font-size: 1em;
+    color: aqua;
+}
+
+.album_secondrow {
+    display: flex;
+    justify-content: space-between;
+} 
+
+
+
+.discography_album {
+    border-top: 0.1em solid white;
+}
+
+.discography {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+.discography > * {
+    flex: 1; 
+}
+
+.discography a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.discography a:hover {
+    color: red;
+}
+
+.dis_box {
+    background-color: blue;
+    padding:  1em 20em;
+}
+
+.year {
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+
+.album-details { 
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.discography_details {
+    font-size: smaller;
+}
+
+.dis_album_img {
+    width: 10em;
+    height: 10em;
+    margin: 1em;
+}
+
+
+.star-rating {
+    justify-self: flex-end;
+    color: gold; 
+    margin-left: auto;
+    text-align: center;
+}
+
+.songs {
+    border-top: 0.1em solid white;
+}
+
+
+.singleSongs {
+    padding: 1em;
+    border-bottom: 0.1em solid white;
+}
+
+.song_title {
+    color: aqua;
+}
+
+.song_title a, .song_composer {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.song_title a:hover, .song_composer a:hover {
+    color: red;
+}
+.song_composer {
+    font-size: smaller;
+}
+
+.articles {
+    white-space: nowrap;
+}
+
+article .articles {
+    margin: 0 auto;
+    padding: 2em;
+}
+
+
+article a {
+    text-decoration: none;
+    color: inherit;
+    margin: 1.5em;
+}
+
+article a:hover {
+    color: red;
+}
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: darkgreen; 
+    color: white;
+    padding: 2em; 
+}
+
+footer p {
+    text-align: center;
+}
+
+/* biography.html */
+/*================*/
+
+
+.rightside_biomain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}  
+
+/* biography.html */
+/*================*/
+
+/* programs.html */
+/*================*/
+table {
+    width: 100%;
+    margin-top: 10em;
+}
+
+th, td {
+    border: 1px solid blue;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: blue;
+}
+
+.program-main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20em;
+}
+
+.program-main h2 {
+    display: flex;
+
 }
