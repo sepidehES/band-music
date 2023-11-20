@@ -3,6 +3,75 @@
     --darkgreen:rgb(2, 43, 19);
 }
 
+@media screen and (max-width: 450px) {
+    .group_row {
+        width: 10em;   
+    }
+
+    html {
+        font-size: 0.5em;
+    }
+
+    .photoAlbum_highlights {
+        width: 2em;
+        height: 2em;
+    }
+
+    .header_image img {
+        width: 100%;
+    }
+
+    .indx_bioimage {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 0 !important;
+    }
+
+    .group_info {
+        margin: 0 !important;
+    }
+
+    .menubar {
+        width: 50em !important;
+    }
+    
+    .index_rightside {
+        width: 50em !important;
+    }
+
+    .index_rightsidetext  {
+        margin-top: 1em !important;
+    }
+
+    .dis_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:  1em !important;
+        width: 100%; 
+    }
+
+    .songs, .articles {
+        width: 100% !important;
+    }
+
+    .indx_bioimage {
+        width: 3em;
+        height: 3em;
+    }
+}
+
+@media print {
+
+  footer, img {
+    display: none !important;
+  }
+}
+
 body, header, h1, h2, main, ul, li {
     padding: 0;
     margin: 0;
@@ -13,6 +82,7 @@ html{
     justify-content: center;
 
 }
+
 header {
     width: 100%;
 }
@@ -22,10 +92,12 @@ header {
     justify-content: center;
 }
 
+
 body {
     background-color: black;
     color: white;
-    max-width: 2000px;
+    max-width: 200em; 
+    box-sizing: border-box;
 }
 
 ul {
@@ -38,10 +110,8 @@ p {
 
 main {
     display: flex;
-
     margin-top: 2em;
     padding: 2em;
-    
 }
 
 .index_biography {
@@ -52,10 +122,10 @@ main {
 }
 
 .index_rightside {
-    flex: 3;
     display: flex;
     flex-direction: column;
     align-items: center; 
+    width: 70em;
 }
 
 .index_rightside p{
@@ -70,11 +140,10 @@ main {
 }
 
 .menubar {
-    
-    flex: 1;
     display: flex;
     flex-direction: column;
     text-align: center;
+    width:15em;
 }
 
 .sub_menubar li {
@@ -110,12 +179,16 @@ main {
 }
 
 .group_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-top: 0.1em solid white;
     margin: 2em;
 }
 
 .group_title {
     width: 40%;
+    padding-left: 2em;
 }
 
 .bio_links {
@@ -188,6 +261,10 @@ main {
     padding:  1em 20em;
 }
 
+a {
+    text-decoration: none;
+}
+
 .year {
     font-weight: bold;
     margin-left: 1em;
@@ -220,6 +297,7 @@ main {
 
 .songs {
     border-top: 0.1em solid white;
+    width: auto;
 }
 
 
@@ -246,6 +324,7 @@ main {
 
 .articles {
     white-space: nowrap;
+    width: auto;
 }
 
 article .articles {
@@ -266,17 +345,12 @@ article a:hover {
 
 
 
-
-
-
-
-
 footer {
     display: flex;
     justify-content: center;
     background-color: darkgreen; 
     color: white;
-    padding: 2em; 
+    width: 100%;
 }
 
 footer p {
@@ -300,27 +374,48 @@ footer p {
 /* programs.html */
 /*================*/
 table {
-    width: 100%;
-    margin-top: 10em;
+  
+     margin-top: 5em; 
 }
 
 th, td {
     border: 1px solid blue;
     text-align: center;
-    padding: 8px;
+    padding: 2em;
 }
 
 th {
     background-color: blue;
 }
 
-.program-main {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20em;
+
+/* artists.html */
+/*================*/
+.slider
+{
+    display: none;
 }
 
-.program-main h2 {
-    display: flex;
+.index_rightside {
+    cursor: pointer;
+}
 
+.slider:checked + .index_rightside .group_info {
+    display: none;
+    
+}
+
+/* .index_rightside:hover {
+    cursor: pointer;
+} */
+
+#section1:checked + .index_rightside #section1Content,
+#section2:checked + .index_rightside #section2Content,
+#section3:checked + .index_rightside #section3Content,
+#section4:checked + .index_rightside #section4Content,
+#section5:checked + .index_rightside #section5Content,
+#section6:checked + .index_rightside #section6Content,
+#section7:checked + .index_rightside #section7Content,
+#section8:checked + .index_rightside #section8Content {
+    display: block;
 }
