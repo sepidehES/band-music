@@ -4,12 +4,14 @@
 }
 
 @media screen and (max-width: 450px) {
-    .group_row {
-        width: 10em;   
-    }
-
     html {
         font-size: 0.5em;
+    }
+    }
+
+@media screen and (max-width: 1400px) {
+    .group_row {
+        width: 10em;   
     }
 
     .photoAlbum_highlights {
@@ -17,17 +19,23 @@
         height: 2em;
     }
 
-    .header_image img {
-        width: 100%;
+
+    .header_image img, .menubar, .index_rightside {
+        width: 100% !important; 
     }
 
     .indx_bioimage {
         display: none;
     }
 
+    .menubar {
+        margin-bottom: 1em;
+    }
+
     main {
         display: flex;
         flex-direction: column;
+        width: 100% !important;
         padding: 0 !important;
     }
 
@@ -35,69 +43,61 @@
         margin: 0 !important;
     }
 
-    .menubar {
-        width: 50em !important;
-    }
-    
-    .index_rightside {
-        width: 50em !important;
-    }
-
     .index_rightsidetext  {
         margin-top: 1em !important;
     }
 
     .dis_box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
         padding:  1em !important;
-        width: 100%; 
+        /* width: 100%;  */
     }
 
-    .songs, .articles {
-        width: 100% !important;
+
+    .bio_image img {
+        width: 15em;
     }
 
-    .indx_bioimage {
-        width: 3em;
-        height: 3em;
+    .artistes_liste_info h4, .artistes_liste_row, .artistes_liste_info p {
+        padding: 0 !important;
+    
     }
 }
 
 @media print {
 
-  footer, img {
+    html {
+        color: black !important;
+    }
+
+  footer, img, .menubar, header {
     display: none !important;
   }
+
+  .group_info {
+    display: block !important;
 }
 
-body, header, h1, h2, main, ul, li {
+
+}
+
+body, header, h1, h2,h3, h4, main, ul, li {
     padding: 0;
     margin: 0;
 }
 
-html{
+header, main {
     display: flex;
     justify-content: center;
-
+    margin-top: 2em;
+    padding: 2em;
+    width: 80%;
 }
-
-header {
-    width: 100%;
-}
-
-.header_image {
-    display: flex;
-    justify-content: center;
-}
-
 
 body {
     background-color: black;
     color: white;
-    max-width: 200em; 
-    box-sizing: border-box;
+    width: 100%;  
 }
 
 ul {
@@ -106,12 +106,6 @@ ul {
 
 p {
     text-align: justify;
-}
-
-main {
-    display: flex;
-    margin-top: 2em;
-    padding: 2em;
 }
 
 .index_biography {
@@ -128,7 +122,7 @@ main {
     width: 70em;
 }
 
-.index_rightside p{
+.index_rightside p {
     width: 70%;
 
 }
@@ -167,6 +161,7 @@ main {
     display: flex;
     align-items: center;
     width: 50em;   
+    margin-bottom: 1em;
 }
 
 .group_row h3 {
@@ -233,18 +228,16 @@ main {
 
 
 .discography_album {
+    display: flex;
+    flex-direction: column;
     border-top: 0.1em solid white;
 }
 
 .discography {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     margin-bottom: 1em;
-}
-
-.discography > * {
-    flex: 1; 
 }
 
 .discography a {
@@ -257,8 +250,19 @@ main {
 }
 
 .dis_box {
+    text-align: center;
+    box-sizing: border-box;
     background-color: blue;
-    padding:  1em 20em;
+    margin: auto;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 100%;
+}
+
+section {
+    width: 80%;
+    margin-bottom: 1em;
+    padding-top: 1em;
 }
 
 a {
@@ -267,17 +271,18 @@ a {
 
 .year {
     font-weight: bold;
-    margin-left: 1em;
+
 }
 
 
 .album-details { 
     text-decoration: none;
     color: inherit;
-    display: block;
 }
 
 .discography_details {
+    display: flex;
+    flex-direction: column;
     font-size: smaller;
 }
 
@@ -289,20 +294,23 @@ a {
 
 
 .star-rating {
-    justify-self: flex-end;
     color: gold; 
-    margin-left: auto;
     text-align: center;
 }
 
 .songs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-top: 0.1em solid white;
-    width: auto;
+
 }
 
 
 .singleSongs {
     padding: 1em;
+    text-align: center;
+    width: 70%;
     border-bottom: 0.1em solid white;
 }
 
@@ -323,15 +331,15 @@ a {
 }
 
 .articles {
-    white-space: nowrap;
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-article .articles {
-    margin: 0 auto;
+.articles h4 {
     padding: 2em;
+   
 }
-
 
 article a {
     text-decoration: none;
@@ -391,31 +399,61 @@ th {
 
 /* artists.html */
 /*================*/
-.slider
+
+ .artistes_liste_box {
+    text-align: center;
+    background-color: blue;
+    cursor: pointer;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 100%;
+}
+
+.artistes_liste_info a {
+    color: aqua;
+
+}
+
+.artistes_liste_info h4, .artistes_liste_row, .artistes_liste_info p {
+    padding: 0 3em;
+
+}
+.artistes_liste_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.artistes_liste_info p {
+   width: 90% !important;
+} 
+
+.artistes_liste_title {
+
+   min-width: 12em;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.slider, .slider2,
+.slider3, .slider4,
+.slider5, .slider6,
+.slider7
 {
     display: none;
 }
 
-.index_rightside {
-    cursor: pointer;
-}
-
-.slider:checked + .index_rightside .group_info {
+.slider:checked + #section1Content,
+.slider2:checked +  #section2Content,
+.slider3:checked + #section3Content,
+.slider4:checked + #section4Content,
+.slider5:checked + #section5Content,
+.slider6:checked + #section6Content,
+.slider7:checked + #section7Content {
     display: none;
-    
-}
-
-/* .index_rightside:hover {
-    cursor: pointer;
-} */
-
-#section1:checked + .index_rightside #section1Content,
-#section2:checked + .index_rightside #section2Content,
-#section3:checked + .index_rightside #section3Content,
-#section4:checked + .index_rightside #section4Content,
-#section5:checked + .index_rightside #section5Content,
-#section6:checked + .index_rightside #section6Content,
-#section7:checked + .index_rightside #section7Content,
-#section8:checked + .index_rightside #section8Content {
-    display: block;
 }
